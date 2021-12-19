@@ -18,9 +18,9 @@ f.close() # closes the open .txt file
 melon_prices = { "Musk": 1.15, "Hybrid": 1.30, "Watermelon": 1.75, "Winter": 4.00 } # sets price per melon for each melon type in a dictionary
 total_revenue = 0 # sets initial total_revenue at 0
 for melon_type in melon_tallies: # iterates through each melon_type (key) in melon_tallies dictionary
-    price = melon_prices[melon_type]
-    revenue = price * melon_tallies[melon_type]
-    total_revenue += revenue
+    price = melon_prices[melon_type] # price per melon for this particular melon_type
+    revenue = price * melon_tallies[melon_type] # revenue for this particular melon_type
+    total_revenue += revenue # adds revenue to total_revenue
     # print("We sold %d %s melons at %0.2f each for a total of %0.2f" % (melon_tallies[melon_type], melon_type, price, revenue))
     print(f"We sold {melon_tallies[melon_type]} {melon_type} melons at {price:.2f} each for a total of {revenue:.2f}") # prints readable information in the terminal
 print("******************************************") # spacer line
@@ -39,3 +39,10 @@ if sales[1] > sales[0]: # if salesperson sales is greater than internet sales
 else:
     print("Time to fire the sales team! Online sales rule all!")
 print("******************************************") # spacer
+
+# Possible refactoring:
+#   Delete lines 3-5.
+#   'spacer' lines could be combined into a spacer() function.
+#   lines 7-17 could be combined into a function that takes the .txt file as an argument/parameter and returns the melon_tallies dictionary. Delete line 13-14 and change line 12 => _, melon_type, melon_count = l.split("|"). And line 15, change melon_count => int(melon_count)
+#   lines 18-25 could be combined into a function that takes a dictionary (melon_tallies) as an argument/parameter.
+# lines 27-40 could be combined into a function takes the .txt file as an argument/parameter.
