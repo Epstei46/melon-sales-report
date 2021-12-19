@@ -43,6 +43,6 @@ print("******************************************") # spacer
 # Possible refactoring:
 #   Delete lines 3-5.
 #   'spacer' lines could be combined into a spacer() function.
-#   lines 7-17 could be combined into a function that takes the .txt file as an argument/parameter and returns the melon_tallies dictionary. Delete line 13-14 and change line 12 => _, melon_type, melon_count = l.split("|"). And line 15, change melon_count => int(melon_count)
+#   lines 7-17 could be combined into a function that takes the .txt file as an argument/parameter and returns the melon_tallies dictionary. Change line 11 => for line in orders:. Delete line 13-14 and change line 12 => _, melon_type, melon_count = l.split("|"). And line 15, change melon_count => int(melon_count)
 #   lines 18-25 could be combined into a function that takes a dictionary (melon_tallies) as an argument/parameter.
-# lines 27-40 could be combined into a function takes the .txt file as an argument/parameter.
+# lines 27-40 could be combined into a function takes the .txt file as an argument/parameter. Change line 31 => if d[2] == "ONLINE":. Add line at the end => f.close() to close the open file.
